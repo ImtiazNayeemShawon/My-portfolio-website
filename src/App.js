@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import Home from './components/home'
@@ -10,11 +9,10 @@ import './styles/main.css'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "animate.css"
 import Button from '@mui/material/Button';
-import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
-import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
+import './styles/nav.css';
 
 import "@fortawesome/free-regular-svg-icons"
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
     <div className='main-div'> 
@@ -22,12 +20,12 @@ function App() {
       <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>} />
-          <Route path="Achive" element={<Achive />} />
-          <Route path="About" element={<About />} />
-          <Route path="Skill" element={<Skill />} />
-          
+      <Route path="/about" element={<About/>} />
+      <Route path="/achive" element={<Achive/>} />
+      <Route path="/skill" element={<Skill/>} />
     </Routes>
   </BrowserRouter>
+  
 
       </div>
   );
